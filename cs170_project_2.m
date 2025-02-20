@@ -1,20 +1,29 @@
 clc, clearvars
 
-prompt = "Welcome to the Feature Selection Algorithm!";
+prompt = "Welcome to Isaias Bernal's Feature Selection Algorithm";
 prompt = prompt + newline + ... 
-"Please select which file you would like to use:" ...
-+ newline +  "[1]Small Data set" + newline +  "[2]Big Data set" ...
-+ newline;
-file_choice = input(prompt);
+"Please type in the name of the file to test : ";
+file_choice = input(prompt,'s');
 
-if file_choice == 1
-    data = load('C:\Users\meboy\Desktop\UCR\CS\CS170\Project-2\CS170_Small_Data__15.txt');
+if file_choice == "CS170_Small_Data__15.txt"
+    data = load('CS170_Small_Data__15.txt');
 end
-if file_choice == 2
-    data = load("C:\Users\meboy\Desktop\UCR\CS\CS170\Project-2\CS170_Large_Data__68.txt");
+if file_choice == "CS170_Large_Data__68.txt"
+    data = load("CS170_Large_Data__68.txt");
 end 
 if isempty(file_choice)
     file_choice = "Nothing";
 end
 
-feature_search(data)
+prompt = "Type the number of the algorithm you want to run." + newline + ...
+    "   1)Forward Selection" + newline + ...
+    "   2)Backward Elimination" + newline;
+
+algo_choice = input(prompt,'s');
+
+if algo_choice == "1"
+    feature_search(data)
+end
+if algo_choice == "2"
+    %TODO implement Backward Elimination
+end 
