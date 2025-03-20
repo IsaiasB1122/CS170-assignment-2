@@ -1,6 +1,6 @@
-clearvars
+clc, clearvars
 
-prompt = "Welcome to Isaias Bernal's Feature Selection Algorithm!";
+prompt = "Welcome to Isaias Bernal's Feature Selection Algorithm.";
 prompt = prompt + newline + ... 
 "Please type in the name of the file to test : ";
 file_choice = input(prompt,'s');
@@ -21,12 +21,8 @@ disp(['This dataset has ', feature_count, ...
         num2str(size(data,1)), ' instances.']);
 
 if algo_choice == "1"
-    tic
     feature_search(data);
-    toc
 end
 if algo_choice == "2"
-    tic
     backwards_feature_search(data)
-    toc
 end 

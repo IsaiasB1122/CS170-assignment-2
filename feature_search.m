@@ -54,7 +54,7 @@ for i = 1 : size(data, 2) - 1
     current_set_of_features_with_comas = current_set_of_features_with_comas(1:end-2); %add comas except until end value of array.
 
     if i~= size(data, 2) -  1
-    disp(['Feature set {',num2str(current_set_of_features_with_comas), '}', ' was best. Accuracy is ', num2str(best_so_far_accuracy * 100), '%', newline]);
+    disp([newline,'Feature set {',num2str(current_set_of_features_with_comas), '}', ' was best. Accuracy is ', num2str(best_so_far_accuracy * 100), '%', newline]);
     end 
 
 end
